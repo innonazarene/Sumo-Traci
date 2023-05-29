@@ -19,13 +19,18 @@ class SumoSimulation:
             traci.edge.setDisallowed(edge_id, ["all"])
 
         while traci.simulation.getMinExpectedNumber() > 0:
-            traci.simulationStep()
-            best_lanes = self.calculate_best_lanes(vehicles_list[0])
-            #try:
+            try:
+                traci.simulationStep()
+
+                # Get the list of vehicles
+                vhList = traci.vehicle.getIDList()
+                #print("Vehicle List:", vhList)
+                if vhList:
+                    best_lanes = self.calculate_best_lanes(vehicles_list[0])
 
             # Update the positions of the polygons to match the lanes
-            #except:
-                #print("vehicle gone")
+            except:
+                print("vehicle gone")
             # Retrieve data and update lists
             self.time_steps.append(traci.simulation.getTime())
             self.vehicle_counts.append(traci.simulation.getDepartedNumber())
@@ -34,6 +39,31 @@ class SumoSimulation:
             if traci.simulation.getTime() > simulation_duration:
                 break
 
+        # End the simulation and close the TraCI connection
+        traci.close()
+    def stats(self, edges_to_close, simulation_duration, vehicles_list):
+        # Connect to the running SUMO simulation
+        traci.start(["sumo", "-c", self.sumocfg_file])
+
+        # Retrieve the list of available edges
+        edge_list = traci.edge.getIDList()
+
+        # Close the edges
+        for edge_id in edges_to_close:
+            traci.edge.setDisallowed(edge_id, ["all"])
+
+        while traci.simulation.getMinExpectedNumber() > 0:
+            traci.simulationStep()
+            # Retrieve data and update lists
+            self.time_steps.append(traci.simulation.getTime())
+            self.vehicle_counts.append(traci.simulation.getDepartedNumber())
+
+            # Break the loop if the desired simulation duration is reached
+            if traci.simulation.getTime() > simulation_duration:
+                break
+
+        # End the simulation and close the TraCI connection
+        traci.close()
     def plot_results(self):
         # Plot the data
         plt.plot(self.time_steps, self.vehicle_counts)
@@ -85,6 +115,6 @@ simulation_duration = 10000  # Replace with your desired duration in simulation 
 
 # Run the simulation
 simulation.run_simulation(edges_to_close, simulation_duration, vehicles_list)
-
+simulation.stats(edges_to_close, 500, vehicles_list)
 # Plot the results
-simulation.plot_results()
+#simulation.plot_results()
