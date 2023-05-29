@@ -6,6 +6,7 @@ class SumoSimulation:
         self.sumocfg_file = sumocfg_file
         self.time_steps = []
         self.vehicle_counts = []
+        self.counter = 0
 
     def run_simulation(self, edges_to_close, simulation_duration, vehicles_list):
         # Connect to the running SUMO simulation
@@ -19,18 +20,20 @@ class SumoSimulation:
             traci.edge.setDisallowed(edge_id, ["all"])
 
         while traci.simulation.getMinExpectedNumber() > 0:
-            try:
-                traci.simulationStep()
+            #try:
+            traci.simulationStep()
 
-                # Get the list of vehicles
-                vhList = traci.vehicle.getIDList()
-                #print("Vehicle List:", vhList)
-                if vhList:
-                    best_lanes = self.calculate_best_lanes(vehicles_list[0])
-
+            # Get the list of vehicles
+            vhList = traci.vehicle.getIDList()
+            #print("Vehicle List:", vhList)
+            if vhList:
+                if  vehicles_list[self.counter] in vhList:
+                    best_lanes = self.calculate_best_lanes(vehicles_list[self.counter])
+                else:
+                    self.counter += 1
             # Update the positions of the polygons to match the lanes
-            except:
-                print("vehicle gone")
+            # except:
+            #     print("vehicle gone")
             # Retrieve data and update lists
             self.time_steps.append(traci.simulation.getTime())
             self.vehicle_counts.append(traci.simulation.getDepartedNumber())
@@ -41,7 +44,7 @@ class SumoSimulation:
 
         # End the simulation and close the TraCI connection
         traci.close()
-    def stats(self, edges_to_close, simulation_duration, vehicles_list):
+    def stats(self, edges_to_close, simulation_duration, null):
         # Connect to the running SUMO simulation
         traci.start(["sumo", "-c", self.sumocfg_file])
 
@@ -98,7 +101,7 @@ class SumoSimulation:
 
         # Select the best lanes based on your criteria
         best_lanes = [lane[0] for lane in sorted_lanes[:5]]  # Example: Select top 5 lanes with highest average speed
-        print("best Lanes",best_lanes)
+        print("best Lanes of <"+vehicle_id+">",best_lanes)
 
         return best_lanes
 
@@ -108,7 +111,7 @@ simulation = SumoSimulation("../osm.sumocfg")
 
 # Define the list of edges to close
 edges_to_close = ["-724017859#1","167317226#0"]  # Replace with your desired edge IDs
-vehicles_list = ["veh0"]
+vehicles_list = ["veh0","veh1","veh2","veh3","veh4"]
 
 # Run the simulation for a specific duration
 simulation_duration = 10000  # Replace with your desired duration in simulation steps
