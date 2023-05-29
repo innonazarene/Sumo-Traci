@@ -20,21 +20,21 @@ class SumoSimulation:
             traci.edge.setDisallowed(edge_id, ["all"])
 
         while traci.simulation.getMinExpectedNumber() > 0:
-            #try:
-            traci.simulationStep()
+            try:
+                traci.simulationStep()
 
-            # Get the list of vehicles
-            vhList = traci.vehicle.getIDList()
-            #print("Vehicle List:", vhList)
-            if vhList:
-                if  vehicles_list[self.counter] in vhList:
-                    best_lanes = self.calculate_best_lanes(vehicles_list[self.counter])
-                else:
-                    self.counter += 1
-            # Update the positions of the polygons to match the lanes
-            # except:
-            #     print("vehicle gone")
-            # Retrieve data and update lists
+                # Get the list of vehicles
+                vhList = traci.vehicle.getIDList()
+                #print("Vehicle List:", vhList)
+                if vhList:
+                    if  vehicles_list[self.counter] in vhList:
+                        best_lanes = self.calculate_best_lanes(vehicles_list[self.counter])
+                    else:
+                        self.counter += 1
+                #Update the positions of the polygons to match the lanes
+            except:
+                print("vehicle gone")
+            #Retrieve data and update lists
             self.time_steps.append(traci.simulation.getTime())
             self.vehicle_counts.append(traci.simulation.getDepartedNumber())
 
