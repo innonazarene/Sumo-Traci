@@ -1,0 +1,8 @@
+def plot_results(self):
+    # Plot the data
+    plt.plot(self.time_steps, self.vehicle_counts)
+    plt.xlabel("Simulation Time")
+    plt.ylabel("Number of Vehicles Departed")
+    plt.title("Vehicle Departures over Time")
+    plt.grid(True)
+    plt.show()

@@ -1,0 +1,26 @@
+def run_simulation(self, edges_to_close, simulation_duration, vehicles_list):
+    # Connect to the running SUMO simulation
+    traci.start(["sumo-gui", "-c", self.sumocfg_file])
+
+    # Retrieve the list of available edges
+    edge_list = traci.edge.getIDList()
+
+    # Close the edges
+    for edge_id in edges_to_close:
+        traci.edge.setDisallowed(edge_id, ["all"])
+
+    while traci.simulation.getMinExpectedNumber() > 0:
+        traci.simulationStep()
+        best_lanes = self.calculate_best_lanes(vehicles_list[0])
+        #try:
+
+        # Update the positions of the polygons to match the lanes
+        #except:
+            #print("vehicle gone")
+        # Retrieve data and update lists
+        self.time_steps.append(traci.simulation.getTime())
+        self.vehicle_counts.append(traci.simulation.getDepartedNumber())
+
+        # Break the loop if the desired simulation duration is reached
+        if traci.simulation.getTime() > simulation_duration:
+            break
