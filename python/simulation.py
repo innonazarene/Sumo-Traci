@@ -87,9 +87,21 @@ class SumoSimulation:
         lane_speeds = []
         for lane in neighboring_lanes:
             vehicles = traci.lane.getLastStepVehicleIDs(lane[0])
-            # print("getLastStepVehicleIDs: ",vehicles)
+
 
             speeds = [traci.vehicle.getSpeed(vehicle) for vehicle in vehicles]
+            # Get the current time
+            current_time = traci.simulation.getTime()
+
+            # Get the current speed of the vehicle in meters per second (m/s)
+            current_speed_mps = traci.vehicle.getSpeed(vehicle_id)
+
+            # Convert the speed to kilometers per hour (km/h)
+            current_speed_kph = current_speed_mps * 3.6
+
+            # Rest of the method code...
+
+            print("Vehicle", vehicle_id, "speed at time", current_time, "is", current_speed_kph, "km/h")
             if speeds:
                 avg_speed = sum(speeds) / len(speeds)
 
@@ -110,8 +122,8 @@ class SumoSimulation:
 simulation = SumoSimulation("../osm.sumocfg")
 
 # Define the list of edges to close
-edges_to_close = ["-724017859#1","167317226#0"]  # Replace with your desired edge IDs
-vehicles_list = ["veh0","veh1","veh2","veh3","veh4"]
+edges_to_close = ["-724017859#1","169680965#1","-169680965#1","-166219950#2","166219950#2","-166219927#7","166219927#7","-227492934#0","227492934#0","-166219927#2","166219927#2"]  # Replace with your desired edge IDs
+vehicles_list = ["veh0","veh1","veh2","veh3","veh4","veh6"]
 
 # Run the simulation for a specific duration
 simulation_duration = 10000  # Replace with your desired duration in simulation steps
