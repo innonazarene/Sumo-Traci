@@ -31,9 +31,9 @@ class SumoSimulation:
                         best_lanes = self.calculate_best_lanes(vehicles_list[self.counter])
                     else:
                         self.counter += 1
-                #Update the positions of the polygons to match the lanes
             except:
                 print("vehicle gone")
+                self.counter += 1
             #Retrieve data and update lists
             self.time_steps.append(traci.simulation.getTime())
             self.vehicle_counts.append(traci.simulation.getDepartedNumber())
@@ -120,9 +120,22 @@ class SumoSimulation:
 simulation = SumoSimulation("../osm.sumocfg")
 
 # Define the list of edges to close
-#"-724017859#1","169680965#1","-169680965#1","-166219950#2","166219950#2","-166219927#7","166219927#7","-227492934#0","227492934#0","-166219927#2","166219927#2"
-edges_to_close = ["-724017859#1","-227492934#0","227492934#0"]  # Replace with your desired edge IDs
-vehicles_list = ["veh0","veh1","veh2","veh3","veh4","veh6"]
+
+#no constrain
+# edges_to_close = []
+
+#single constrain
+# edges_to_close = ["-724017859#1","724017859#0"]
+
+#double constrain
+# edges_to_close = ["-724017859#1","724017859#0","-169680965#1","169680965#1"]
+
+#multiple constrain
+edges_to_close = ["-724017859#1","169680965#1","-169680965#1","-166219950#2","166219950#2","-166219927#7","166219927#7","-227492934#0","227492934#0","-166219927#2","166219927#2","57017121#4","-166219950#3"]
+
+vehicles_list = ["veh0","veh1","veh2","veh3","veh4","veh5","veh6","veh7","veh8","veh9","veh10","veh11","veh12","veh13","veh14","veh15","veh16","veh17","veh18","veh19","veh20","veh21","veh22"]
+
+
 
 # Run the simulation for a specific duration
 simulation_duration = 10000  # Replace with your desired duration in simulation steps
