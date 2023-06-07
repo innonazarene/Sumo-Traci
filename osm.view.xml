@@ -760,7 +760,7 @@
                 <entry color="yellow"/>
             </colorScheme>
             <scalingScheme name="uniform">
-                <entry color="2.00"/>
+                <entry color="1.00"/>
             </scalingScheme>
             <scalingScheme name="by selection">
                 <entry color="1.00" name="unselected"/>
