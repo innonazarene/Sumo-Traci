@@ -1,4 +1,6 @@
 import traci
+import matplotlib.pyplot as plt
+
 class SumoSimulation:
     def __init__(self, sumocfg_file):
         self.sumocfg_file = sumocfg_file
@@ -42,6 +44,38 @@ class SumoSimulation:
 
         # End the simulation and close the TraCI connection
         traci.close()
+    def stats(self, edges_to_close, simulation_duration, null):
+        # Connect to the running SUMO simulation
+        traci.start(["sumo", "-c", self.sumocfg_file, "--time-to-teleport", "-1"])
+
+        # Retrieve the list of available edges
+        edge_list = traci.edge.getIDList()
+
+        # Close the edges
+        for edge_id in edges_to_close:
+            traci.edge.setDisallowed(edge_id, ["all"])
+
+        while traci.simulation.getMinExpectedNumber() > 0:
+            traci.simulationStep()
+            # Retrieve data and update lists
+            self.time_steps.append(traci.simulation.getTime())
+            self.vehicle_counts.append(traci.simulation.getDepartedNumber())
+
+            # Break the loop if the desired simulation duration is reached
+            if traci.simulation.getTime() > simulation_duration:
+                break
+
+        # End the simulation and close the TraCI connection
+        traci.close()
+    def plot_results(self):
+        # Plot the data
+        plt.plot(self.time_steps, self.vehicle_counts)
+        plt.xlabel("Simulation Time")
+        plt.ylabel("Number of Vehicles Departed")
+        plt.title("Vehicle Departures over Time")
+        plt.grid(True)
+        plt.show()
+
     def calculate_best_lanes(self, vehicle_id):
         # Get the current lane of the vehicle
         current_lane = traci.vehicle.getLaneID(vehicle_id)
@@ -98,4 +132,6 @@ simulation_duration = 10000  # Replace with your desired duration in simulation 
 
 # Run the simulation
 simulation.run_simulation(edges_to_close, simulation_duration, vehicles_list)
-
+simulation.stats(edges_to_close, 500, vehicles_list)
+# Plot the results
+simulation.plot_results()
