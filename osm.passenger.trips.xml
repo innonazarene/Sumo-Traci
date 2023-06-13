@@ -1,92 +1,435 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2023-05-27 22:26:56.560129 by osmWebWizard.py v1_17_0+0000-737931d58da
-<configuration>
-    <net-file value="C:\Program Files (x86)\Eclipse\Sumo\tools\2023-05-27-22-26-52\osm.net.xml.gz"/>
-    <output-trip-file value="C:\Program Files (x86)\Eclipse\Sumo\tools\2023-05-27-22-26-52\osm.passenger.trips.xml"/>
-    <route-file value="C:\Program Files (x86)\Eclipse\Sumo\tools\2023-05-27-22-26-52\osm.passenger.rou.xml"/>
-    <prefix value="veh"/>
-    <trip-attributes value="departLane=&quot;best&quot;"/>
-    <fringe-start-attributes value="departSpeed=&quot;max&quot;"/>
-    <lanes value="True"/>
-    <fringe-factor value="5"/>
-    <allow-fringe.min-length value="1000.0"/>
-    <min-distance value="300.0"/>
-    <min-distance.fringe value="10.0"/>
-    <vehicle-class value="passenger"/>
-    <remove-loops value="True"/>
-    <via-edge-types value="highway.motorway,highway.motorway_link,highway.trunk_link,highway.primary_link,highway.secondary_link,highway.tertiary_link"/>
-    <validate value="True"/>
-    <insertion-density value="1.0"/>
-</configuration>
--->
-
-<!-- generated on 2023-05-27 22:26:56 by Eclipse SUMO duarouter Version 1.17.0
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
-
-    <input>
-        <net-file value="C:\Program Files (x86)\Eclipse\Sumo\tools\2023-05-27-22-26-52\osm.net.xml.gz"/>
-        <route-files value="C:\Program Files (x86)\Eclipse\Sumo\tools\2023-05-27-22-26-52\osm.passenger.trips.xml"/>
-    </input>
-
-    <output>
-        <output-file value="C:\Program Files (x86)\Eclipse\Sumo\tools\2023-05-27-22-26-52\osm.passenger.trips.xml.tmp"/>
-        <alternatives-output value="NUL"/>
-        <write-trips value="true"/>
-    </output>
-
-    <processing>
-        <remove-loops value="true"/>
-    </processing>
-
-    <time>
-        <begin value="0.0"/>
-        <end value="3600.0"/>
-    </time>
-
-    <report>
-        <no-warnings value="true"/>
-        <ignore-errors value="true"/>
-        <no-step-log value="true"/>
-    </report>
-
-</configuration>
+<!-- generated on 2023-06-13 19:09:25 by Eclipse SUMO netedit Version 1.17.0
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <vType id="veh_passenger" accel="2.6" decel="4.5" vClass="passenger"/>
-    <trip id="veh0" type="veh_passenger" depart="0.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh1" type="veh_passenger" depart="50.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-    <trip id="veh15" type="veh_passenger" depart="65.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh16" type="veh_passenger" depart="89.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh17" type="veh_passenger" depart="111.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh18" type="veh_passenger" depart="122.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh19" type="veh_passenger" depart="168.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh20" type="veh_passenger" depart="250.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh21" type="veh_passenger" depart="330.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh22" type="veh_passenger" depart="400.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh2" type="veh_passenger" depart="442.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh5" type="veh_passenger" depart="450.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh6" type="veh_passenger" depart="455.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh7" type="veh_passenger" depart="460.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh8" type="veh_passenger" depart="465.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh9" type="veh_passenger" depart="470.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh10" type="veh_passenger" depart="475.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-	<trip id="veh11" type="veh_passenger" depart="485.00" departLane="best" from="166219897#3" to="-169679274#0"/>
-	<trip id="veh12" type="veh_passenger" depart="490.00" departLane="best" from="169680966#1" to="-169679274#0"/>
-	<trip id="veh13" type="veh_passenger" depart="500.00" departLane="best" from="169680966#1" to="-169679274#0"/>
-	<trip id="veh14" type="veh_passenger" depart="550.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-    <trip id="veh3" type="veh_passenger" depart="663.00" departLane="best" from="166219897#3" to="-169679274#0"/>
-	<trip id="veh4" type="veh_passenger" depart="884.00" departLane="best" from="227826940#5" to="-169679274#0"/>
-    <!--<trip id="veh23" type="veh_passenger" depart="5204.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh24" type="veh_passenger" depart="5425.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh25" type="veh_passenger" depart="5646.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh26" type="veh_passenger" depart="5867.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh27" type="veh_passenger" depart="6088.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh28" type="veh_passenger" depart="6309.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh29" type="veh_passenger" depart="6530.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh30" type="veh_passenger" depart="6751.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh31" type="veh_passenger" depart="6972.00" departLane="best" from="307013301" to="-169679274#0"/>
-	<trip id="veh32" type="veh_passenger" depart="7193.00" departLane="best" from="307013301" to="-169679274#0"/> -->
-
+    <!-- VTypes -->
+    <vType id="bike_bicycle" vClass="bicycle" accel="2.6" decel="4.5"/>
+    <vType id="bus_bus" vClass="bus" accel="2.6" decel="4.5"/>
+    <vType id="motorcycle_motorcycle" vClass="motorcycle" accel="2.6" decel="4.5"/>
+    <vType id="truck_truck" vClass="truck" accel="2.6" decel="4.5"/>
+    <vType id="veh_passenger" vClass="passenger" accel="2.6" decel="4.5"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <trip id="bike0" type="bike_bicycle" depart="0.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus0" type="bus_bus" depart="0.00" departLane="best" departSpeed="max" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle0" type="motorcycle_motorcycle" depart="0.00" departLane="best" departSpeed="max" from="-985688098" to="267607730#0"/>
+    <trip id="truck0" type="truck_truck" depart="0.00" departLane="best" departSpeed="max" from="167317055#0" to="267607730#0"/>
+    <trip id="veh0" type="veh_passenger" depart="0.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bike1" type="bike_bicycle" depart="1.11" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus1" type="bus_bus" depart="1.27" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle1" type="motorcycle_motorcycle" depart="1.27" departLane="best" from="169679274#26" to="267607730#0"/>
+    <trip id="truck1" type="truck_truck" depart="1.27" departLane="best" from="-205148471#4" to="267607730#0"/>
+    <trip id="bike2" type="bike_bicycle" depart="2.21" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus2" type="bus_bus" depart="2.53" departLane="best" departSpeed="max" from="169679281" to="267607730#0"/>
+    <trip id="motorcycle2" type="motorcycle_motorcycle" depart="2.53" departLane="best" from="227744471#1" to="267607730#0"/>
+    <trip id="truck2" type="truck_truck" depart="2.53" departLane="best" departSpeed="max" from="169679281" to="267607730#0"/>
+    <trip id="bike3" type="bike_bicycle" depart="3.32" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus3" type="bus_bus" depart="3.80" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle3" type="motorcycle_motorcycle" depart="3.80" departLane="best" from="-362492408#3" to="267607730#0"/>
+    <trip id="truck3" type="truck_truck" depart="3.80" departLane="best" from="57016690" to="267607730#0"/>
+    <trip id="bike4" type="bike_bicycle" depart="4.43" departLane="best" departSpeed="max" from="227826940#5" to="267607730#0"/>
+    <trip id="bus4" type="bus_bus" depart="5.07" departLane="best" departSpeed="max" from="-985733391" to="267607730#0"/>
+    <trip id="motorcycle4" type="motorcycle_motorcycle" depart="5.07" departLane="best" from="166220863#1" to="267607730#0"/>
+    <trip id="truck4" type="truck_truck" depart="5.07" departLane="best" departSpeed="max" from="-985733391" to="267607730#0"/>
+    <trip id="bike5" type="bike_bicycle" depart="5.53" departLane="best" departSpeed="max" from="227826940#5" to="267607730#0"/>
+    <trip id="bus5" type="bus_bus" depart="6.33" departLane="best" departSpeed="max" from="167317112" to="267607730#0"/>
+    <trip id="motorcycle5" type="motorcycle_motorcycle" depart="6.33" departLane="best" from="339112712#4" to="267607730#0"/>
+    <trip id="truck5" type="truck_truck" depart="6.33" departLane="best" departSpeed="max" from="167317112" to="267607730#0"/>
+    <trip id="bike6" type="bike_bicycle" depart="6.64" departLane="best" from="166219926#12" to="267607730#0"/>
+    <trip id="bus6" type="bus_bus" depart="7.60" departLane="best" departSpeed="max" from="-169680272#2" to="267607730#0"/>
+    <trip id="motorcycle6" type="motorcycle_motorcycle" depart="7.60" departLane="best" from="-227494446#1" to="267607730#0"/>
+    <trip id="truck6" type="truck_truck" depart="7.60" departLane="best" departSpeed="max" from="-169680272#2" to="267607730#0"/>
+    <trip id="bike7" type="bike_bicycle" depart="7.75" departLane="best" departSpeed="max" from="167317207#0" to="267607730#0"/>
+    <trip id="bus7" type="bus_bus" depart="8.87" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle7" type="motorcycle_motorcycle" depart="8.87" departLane="best" from="-166219960#2" to="267607730#0"/>
+    <trip id="truck7" type="truck_truck" depart="8.87" departLane="best" from="-227492934#4" to="267607730#0"/>
+    <trip id="bike9" type="bike_bicycle" depart="9.96" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus8" type="bus_bus" depart="10.13" departLane="best" departSpeed="max" from="227477711" to="267607730#0"/>
+    <trip id="motorcycle8" type="motorcycle_motorcycle" depart="10.13" departLane="best" from="267606599#3" to="267607730#0"/>
+    <trip id="truck8" type="truck_truck" depart="10.13" departLane="best" departSpeed="max" from="227477711" to="267607730#0"/>
+    <trip id="bike10" type="bike_bicycle" depart="11.07" departLane="best" departSpeed="max" from="267606775#0" to="267607730#0"/>
+    <trip id="bus9" type="bus_bus" depart="11.40" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle9" type="motorcycle_motorcycle" depart="11.40" departLane="best" from="169562129#4" to="267607730#0"/>
+    <trip id="truck9" type="truck_truck" depart="11.40" departLane="best" from="-166220901#2" to="267607730#0"/>
+    <trip id="bike11" type="bike_bicycle" depart="12.17" departLane="best" from="-855299632#0" to="267607730#0"/>
+    <trip id="bus10" type="bus_bus" depart="12.67" departLane="best" departSpeed="max" from="267606775#0" to="267607730#0"/>
+    <trip id="motorcycle10" type="motorcycle_motorcycle" depart="12.67" departLane="best" from="-169679278#5" to="267607730#0"/>
+    <trip id="truck10" type="truck_truck" depart="12.67" departLane="best" departSpeed="max" from="267606775#0" to="267607730#0"/>
+    <trip id="bike12" type="bike_bicycle" depart="13.28" departLane="best" from="985690282#1" to="267607730#0"/>
+    <trip id="bus11" type="bus_bus" depart="13.93" departLane="best" departSpeed="max" from="227477711" to="267607730#0"/>
+    <trip id="motorcycle11" type="motorcycle_motorcycle" depart="13.93" departLane="best" from="-166220891#10" to="267607730#0"/>
+    <trip id="truck11" type="truck_truck" depart="13.93" departLane="best" departSpeed="max" from="227477711" to="267607730#0"/>
+    <trip id="bike13" type="bike_bicycle" depart="14.39" departLane="best" departSpeed="max" from="-166220901#4" to="267607730#0"/>
+    <trip id="bus12" type="bus_bus" depart="15.20" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle12" type="motorcycle_motorcycle" depart="15.20" departLane="best" departSpeed="max" from="167317027#0" to="267607730#0"/>
+    <trip id="truck12" type="truck_truck" depart="15.20" departLane="best" from="166219960#1" to="267607730#0"/>
+    <trip id="bike14" type="bike_bicycle" depart="15.49" departLane="best" from="-362492408#3" to="267607730#0"/>
+    <trip id="bus13" type="bus_bus" depart="16.47" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle13" type="motorcycle_motorcycle" depart="16.47" departLane="best" from="724017859#0" to="267607730#0"/>
+    <trip id="truck13" type="truck_truck" depart="16.47" departLane="best" from="868986738#1" to="267607730#0"/>
+    <trip id="bike15" type="bike_bicycle" depart="16.60" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bike16" type="bike_bicycle" depart="17.71" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus14" type="bus_bus" depart="17.73" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle14" type="motorcycle_motorcycle" depart="17.73" departLane="best" from="167317124#1" to="267607730#0"/>
+    <trip id="truck14" type="truck_truck" depart="17.73" departLane="best" from="227827261" to="267607730#0"/>
+    <trip id="bike17" type="bike_bicycle" depart="18.82" departLane="best" departSpeed="max" from="-985474809" to="267607730#0"/>
+    <trip id="bus15" type="bus_bus" depart="19.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle15" type="motorcycle_motorcycle" depart="19.00" departLane="best" from="-166219973#3" to="267607730#0"/>
+    <trip id="truck15" type="truck_truck" depart="19.00" departLane="best" from="339112712#11" to="267607730#0"/>
+    <trip id="bike18" type="bike_bicycle" depart="19.92" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus16" type="bus_bus" depart="20.27" departLane="best" departSpeed="max" from="169402099" to="267607730#0"/>
+    <trip id="motorcycle16" type="motorcycle_motorcycle" depart="20.27" departLane="best" departSpeed="max" from="267606775#0" to="267607730#0"/>
+    <trip id="truck16" type="truck_truck" depart="20.27" departLane="best" departSpeed="max" from="169402099" to="267607730#0"/>
+    <trip id="bike19" type="bike_bicycle" depart="21.03" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus17" type="bus_bus" depart="21.53" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle17" type="motorcycle_motorcycle" depart="21.53" departLane="best" from="-169679278#7" to="267607730#0"/>
+    <trip id="truck17" type="truck_truck" depart="21.53" departLane="best" from="-169680951#1" to="267607730#0"/>
+    <trip id="bike20" type="bike_bicycle" depart="22.14" departLane="best" from="-169679294" to="267607730#0"/>
+    <trip id="bus18" type="bus_bus" depart="22.80" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle18" type="motorcycle_motorcycle" depart="22.80" departLane="best" from="267606688#1" to="267607730#0"/>
+    <trip id="truck18" type="truck_truck" depart="22.80" departLane="best" from="-166220873#0" to="267607730#0"/>
+    <trip id="bike21" type="bike_bicycle" depart="23.24" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus19" type="bus_bus" depart="24.06" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle19" type="motorcycle_motorcycle" depart="24.06" departLane="best" from="169679274#12" to="267607730#0"/>
+    <trip id="truck19" type="truck_truck" depart="24.06" departLane="best" from="-166220908#4" to="267607730#0"/>
+    <trip id="bike22" type="bike_bicycle" depart="24.35" departLane="best" from="-166220873#0" to="267607730#0"/>
+    <trip id="bus20" type="bus_bus" depart="25.33" departLane="best" departSpeed="max" from="167317039" to="267607730#0"/>
+    <trip id="motorcycle20" type="motorcycle_motorcycle" depart="25.33" departLane="best" from="357045566#1" to="267607730#0"/>
+    <trip id="truck20" type="truck_truck" depart="25.33" departLane="best" departSpeed="max" from="167317039" to="267607730#0"/>
+    <trip id="bike23" type="bike_bicycle" depart="25.46" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bike24" type="bike_bicycle" depart="26.56" departLane="best" departSpeed="max" from="167317154#0" to="267607730#0"/>
+    <trip id="bus21" type="bus_bus" depart="26.60" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle21" type="motorcycle_motorcycle" depart="26.60" departLane="best" from="57017412#5" to="267607730#0"/>
+    <trip id="truck21" type="truck_truck" depart="26.60" departLane="best" from="-868982559#0" to="267607730#0"/>
+    <trip id="bike25" type="bike_bicycle" depart="27.67" departLane="best" departSpeed="max" from="-877407665#1" to="267607730#0"/>
+    <trip id="motorcycle22" type="motorcycle_motorcycle" depart="27.86" departLane="best" from="166220841#1" to="267607730#0"/>
+    <trip id="bike26" type="bike_bicycle" depart="28.78" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus23" type="bus_bus" depart="29.13" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle23" type="motorcycle_motorcycle" depart="29.13" departLane="best" departSpeed="max" from="166220897#0" to="267607730#0"/>
+    <trip id="truck23" type="truck_truck" depart="29.13" departLane="best" from="-167317226#3" to="267607730#0"/>
+    <trip id="bus24" type="bus_bus" depart="30.40" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle24" type="motorcycle_motorcycle" depart="30.40" departLane="best" departSpeed="max" from="986109305#0" to="267607730#0"/>
+    <trip id="truck24" type="truck_truck" depart="30.40" departLane="best" from="167317175#2" to="267607730#0"/>
+    <trip id="bike28" type="bike_bicycle" depart="30.99" departLane="best" departSpeed="max" from="-169678151#1" to="267607730#0"/>
+    <trip id="bus25" type="bus_bus" depart="31.66" departLane="best" departSpeed="max" from="986103482" to="267607730#0"/>
+    <trip id="motorcycle25" type="motorcycle_motorcycle" depart="31.66" departLane="best" from="-166220853" to="267607730#0"/>
+    <trip id="truck25" type="truck_truck" depart="31.66" departLane="best" departSpeed="max" from="986103482" to="267607730#0"/>
+    <trip id="bike29" type="bike_bicycle" depart="32.10" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus26" type="bus_bus" depart="32.93" departLane="best" departSpeed="max" from="166220841#0" to="267607730#0"/>
+    <trip id="motorcycle26" type="motorcycle_motorcycle" depart="32.93" departLane="best" from="-166219956#3" to="267607730#0"/>
+    <trip id="truck26" type="truck_truck" depart="32.93" departLane="best" departSpeed="max" from="166220841#0" to="267607730#0"/>
+    <trip id="bike30" type="bike_bicycle" depart="33.20" departLane="best" departSpeed="max" from="986109601" to="267607730#0"/>
+    <trip id="bus27" type="bus_bus" depart="34.20" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle27" type="motorcycle_motorcycle" depart="34.20" departLane="best" from="57017121#5" to="267607730#0"/>
+    <trip id="truck27" type="truck_truck" depart="34.20" departLane="best" from="-267606688#19" to="267607730#0"/>
+    <trip id="bike31" type="bike_bicycle" depart="34.31" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bike32" type="bike_bicycle" depart="35.42" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus28" type="bus_bus" depart="35.46" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle28" type="motorcycle_motorcycle" depart="35.46" departLane="best" from="166219901#2" to="267607730#0"/>
+    <trip id="truck28" type="truck_truck" depart="35.46" departLane="best" from="-362492408#0" to="267607730#0"/>
+    <trip id="bike33" type="bike_bicycle" depart="36.52" departLane="best" from="169683864#2" to="267607730#0"/>
+    <trip id="bus29" type="bus_bus" depart="36.73" departLane="best" departSpeed="max" from="-169679286#1" to="267607730#0"/>
+    <trip id="motorcycle29" type="motorcycle_motorcycle" depart="36.73" departLane="best" from="167317208#0" to="267607730#0"/>
+    <trip id="truck29" type="truck_truck" depart="36.73" departLane="best" departSpeed="max" from="-169679286#1" to="267607730#0"/>
+    <trip id="bike34" type="bike_bicycle" depart="37.63" departLane="best" departSpeed="max" from="-584829495" to="267607730#0"/>
+    <trip id="bus30" type="bus_bus" depart="38.00" departLane="best" departSpeed="max" from="167317131" to="267607730#0"/>
+    <trip id="motorcycle30" type="motorcycle_motorcycle" depart="38.00" departLane="best" from="169683857#1" to="267607730#0"/>
+    <trip id="truck30" type="truck_truck" depart="38.00" departLane="best" departSpeed="max" from="167317131" to="267607730#0"/>
+    <trip id="bike35" type="bike_bicycle" depart="38.74" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus31" type="bus_bus" depart="39.26" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle31" type="motorcycle_motorcycle" depart="39.26" departLane="best" from="357045566#1" to="267607730#0"/>
+    <trip id="truck31" type="truck_truck" depart="39.26" departLane="best" from="-724017862#1" to="267607730#0"/>
+    <trip id="bike36" type="bike_bicycle" depart="39.84" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus32" type="bus_bus" depart="40.53" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="motorcycle32" type="motorcycle_motorcycle" depart="40.53" departLane="best" from="-227492934#7" to="267607730#0"/>
+    <trip id="truck32" type="truck_truck" depart="40.53" departLane="best" from="166220849#1" to="267607730#0"/>
+    <trip id="bike37" type="bike_bicycle" depart="40.95" departLane="best" from="167317244#2" to="267607730#0"/>
+    <trip id="bus33" type="bus_bus" depart="41.80" departLane="best" departSpeed="max" from="166220903#0" to="267607730#0"/>
+    <trip id="motorcycle33" type="motorcycle_motorcycle" depart="41.80" departLane="best" departSpeed="max" from="-1010755616" to="267607730#0"/>
+    <trip id="truck33" type="truck_truck" depart="41.80" departLane="best" departSpeed="max" from="166220903#0" to="267607730#0"/>
+    <trip id="bike38" type="bike_bicycle" depart="42.06" departLane="best" departSpeed="max" from="868982557" to="267607730#0"/>
+    <trip id="bus34" type="bus_bus" depart="43.06" departLane="best" departSpeed="max" from="-985688092" to="267607730#0"/>
+    <trip id="motorcycle34" type="motorcycle_motorcycle" depart="43.06" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="truck34" type="truck_truck" depart="43.06" departLane="best" departSpeed="max" from="-985688092" to="267607730#0"/>
+    <trip id="bike39" type="bike_bicycle" depart="43.16" departLane="best" from="-267606599#4" to="267607730#0"/>
+    <trip id="bike40" type="bike_bicycle" depart="44.27" departLane="best" from="-166220863#1" to="267607730#0"/>
+    <trip id="bus35" type="bus_bus" depart="44.33" departLane="best" departSpeed="max" from="991443347#0" to="267607730#0"/>
+    <trip id="motorcycle35" type="motorcycle_motorcycle" depart="44.33" departLane="best" from="357045569#1" to="267607730#0"/>
+    <trip id="truck35" type="truck_truck" depart="44.33" departLane="best" departSpeed="max" from="991443347#0" to="267607730#0"/>
+    <trip id="bike41" type="bike_bicycle" depart="45.38" departLane="best" from="166220906#2" to="267607730#0"/>
+    <trip id="bus36" type="bus_bus" depart="45.60" departLane="best" from="991443347#1" to="267607730#0"/>
+    <trip id="motorcycle36" type="motorcycle_motorcycle" depart="45.60" departLane="best" from="166220840#3" to="267607730#0"/>
+    <trip id="truck36" type="truck_truck" depart="45.60" departLane="best" from="991443347#1" to="267607730#0"/>
+    <trip id="bike42" type="bike_bicycle" depart="46.48" departLane="best" from="985688105#1" to="267607730#0"/>
+    <trip id="bus37" type="bus_bus" depart="46.86" departLane="best" from="-167293525#4" to="267607730#0"/>
+    <trip id="motorcycle37" type="motorcycle_motorcycle" depart="46.86" departLane="best" from="-166219964#0" to="267607730#0"/>
+    <trip id="truck37" type="truck_truck" depart="46.86" departLane="best" from="-167293525#4" to="267607730#0"/>
+    <trip id="bike43" type="bike_bicycle" depart="47.59" departLane="best" departSpeed="max" from="991443347#0" to="267607730#0"/>
+    <trip id="bus38" type="bus_bus" depart="48.13" departLane="best" departSpeed="max" from="169700743" to="267607730#0"/>
+    <trip id="motorcycle38" type="motorcycle_motorcycle" depart="48.13" departLane="best" departSpeed="max" from="986106336" to="267607730#0"/>
+    <trip id="truck38" type="truck_truck" depart="48.13" departLane="best" departSpeed="max" from="169700743" to="267607730#0"/>
+    <trip id="bike44" type="bike_bicycle" depart="48.70" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus39" type="bus_bus" depart="49.40" departLane="best" from="-166219969#2" to="267607730#0"/>
+    <trip id="motorcycle39" type="motorcycle_motorcycle" depart="49.40" departLane="best" from="339112712#12" to="267607730#0"/>
+    <trip id="truck39" type="truck_truck" depart="49.40" departLane="best" from="-166219969#2" to="267607730#0"/>
+    <trip id="bike45" type="bike_bicycle" depart="49.80" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh1" type="veh_passenger" depart="50.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus40" type="bus_bus" depart="50.66" departLane="best" departSpeed="max" from="986109305#0" to="267607730#0"/>
+    <trip id="motorcycle40" type="motorcycle_motorcycle" depart="50.66" departLane="best" from="158638456#3" to="267607730#0"/>
+    <trip id="truck40" type="truck_truck" depart="50.66" departLane="best" departSpeed="max" from="986109305#0" to="267607730#0"/>
+    <trip id="bike46" type="bike_bicycle" depart="50.91" departLane="best" from="22803525#2" to="267607730#0"/>
+    <trip id="bus41" type="bus_bus" depart="51.93" departLane="best" from="-166219907#2" to="267607730#0"/>
+    <trip id="motorcycle41" type="motorcycle_motorcycle" depart="51.93" departLane="best" from="-166220873#1" to="267607730#0"/>
+    <trip id="truck41" type="truck_truck" depart="51.93" departLane="best" from="-166219907#2" to="267607730#0"/>
+    <trip id="bike47" type="bike_bicycle" depart="52.02" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bike48" type="bike_bicycle" depart="53.12" departLane="best" departSpeed="max" from="986122167" to="267607730#0"/>
+    <trip id="bus42" type="bus_bus" depart="53.20" departLane="best" departSpeed="max" from="167317193#0" to="267607730#0"/>
+    <trip id="motorcycle42" type="motorcycle_motorcycle" depart="53.20" departLane="best" from="169679278#7" to="267607730#0"/>
+    <trip id="truck42" type="truck_truck" depart="53.20" departLane="best" departSpeed="max" from="167317193#0" to="267607730#0"/>
+    <trip id="bike49" type="bike_bicycle" depart="54.23" departLane="best" from="985738270" to="267607730#0"/>
+    <trip id="bus43" type="bus_bus" depart="54.46" departLane="best" departSpeed="max" from="-169686363#3" to="267607730#0"/>
+    <trip id="motorcycle43" type="motorcycle_motorcycle" depart="54.46" departLane="best" from="985695583#0" to="267607730#0"/>
+    <trip id="truck43" type="truck_truck" depart="54.46" departLane="best" departSpeed="max" from="-169686363#3" to="267607730#0"/>
+    <trip id="bike50" type="bike_bicycle" depart="55.34" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus44" type="bus_bus" depart="55.73" departLane="best" from="-167293536" to="267607730#0"/>
+    <trip id="motorcycle44" type="motorcycle_motorcycle" depart="55.73" departLane="best" from="267607730#1" to="267607730#0"/>
+    <trip id="truck44" type="truck_truck" depart="55.73" departLane="best" from="-167293536" to="267607730#0"/>
+    <trip id="bike51" type="bike_bicycle" depart="56.45" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus45" type="bus_bus" depart="57.00" departLane="best" departSpeed="max" from="-986104609" to="267607730#0"/>
+    <trip id="motorcycle45" type="motorcycle_motorcycle" depart="57.00" departLane="best" from="-167317226#0" to="267607730#0"/>
+    <trip id="truck45" type="truck_truck" depart="57.00" departLane="best" departSpeed="max" from="-986104609" to="267607730#0"/>
+    <trip id="bike52" type="bike_bicycle" depart="57.55" departLane="best" from="267606599#8" to="267607730#0"/>
+    <trip id="bus46" type="bus_bus" depart="58.26" departLane="best" from="357045569#0" to="267607730#0"/>
+    <trip id="motorcycle46" type="motorcycle_motorcycle" depart="58.26" departLane="best" departSpeed="max" from="-985688098" to="267607730#0"/>
+    <trip id="truck46" type="truck_truck" depart="58.26" departLane="best" from="357045569#0" to="267607730#0"/>
+    <trip id="bike53" type="bike_bicycle" depart="58.66" departLane="best" departSpeed="max" from="-167293552#1" to="267607730#0"/>
+    <trip id="bus47" type="bus_bus" depart="59.53" departLane="best" departSpeed="max" from="166219926#0" to="267607730#0"/>
+    <trip id="motorcycle47" type="motorcycle_motorcycle" depart="59.53" departLane="best" from="-169680951#7" to="267607730#0"/>
+    <trip id="truck47" type="truck_truck" depart="59.53" departLane="best" departSpeed="max" from="166219926#0" to="267607730#0"/>
+    <trip id="bike54" type="bike_bicycle" depart="59.77" departLane="best" departSpeed="max" from="-986107130" to="267607730#0"/>
+    <trip id="bus48" type="bus_bus" depart="60.80" departLane="best" from="-267606688#17" to="267607730#0"/>
+    <trip id="motorcycle48" type="motorcycle_motorcycle" depart="60.80" departLane="best" departSpeed="max" from="-986101792" to="267607730#0"/>
+    <trip id="truck48" type="truck_truck" depart="60.80" departLane="best" from="-267606688#17" to="267607730#0"/>
+    <trip id="bike55" type="bike_bicycle" depart="60.87" departLane="best" from="57017412#2" to="267607730#0"/>
+    <trip id="bike56" type="bike_bicycle" depart="61.98" departLane="best" from="166219924" to="267607730#0"/>
+    <trip id="bus49" type="bus_bus" depart="62.06" departLane="best" departSpeed="max" from="167293541" to="267607730#0"/>
+    <trip id="motorcycle49" type="motorcycle_motorcycle" depart="62.06" departLane="best" from="166219969#4" to="267607730#0"/>
+    <trip id="truck49" type="truck_truck" depart="62.06" departLane="best" departSpeed="max" from="167293541" to="267607730#0"/>
+    <trip id="bike57" type="bike_bicycle" depart="63.09" departLane="best" from="868538946" to="267607730#0"/>
+    <trip id="bus50" type="bus_bus" depart="63.33" departLane="best" from="169683864#1" to="267607730#0"/>
+    <trip id="motorcycle50" type="motorcycle_motorcycle" depart="63.33" departLane="best" from="316315762" to="267607730#0"/>
+    <trip id="truck50" type="truck_truck" depart="63.33" departLane="best" from="169683864#1" to="267607730#0"/>
+    <trip id="bike58" type="bike_bicycle" depart="64.19" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus51" type="bus_bus" depart="64.60" departLane="best" departSpeed="max" from="-1010755616" to="267607730#0"/>
+    <trip id="motorcycle51" type="motorcycle_motorcycle" depart="64.60" departLane="best" departSpeed="max" from="-986107131" to="267607730#0"/>
+    <trip id="truck51" type="truck_truck" depart="64.60" departLane="best" departSpeed="max" from="-1010755616" to="267607730#0"/>
+    <trip id="veh15" type="veh_passenger" depart="65.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bike59" type="bike_bicycle" depart="65.30" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus52" type="bus_bus" depart="65.86" departLane="best" departSpeed="max" from="-166219922#15" to="267607730#0"/>
+    <trip id="motorcycle52" type="motorcycle_motorcycle" depart="65.86" departLane="best" from="166219973#1" to="267607730#0"/>
+    <trip id="truck52" type="truck_truck" depart="65.86" departLane="best" departSpeed="max" from="-166219922#15" to="267607730#0"/>
+    <trip id="bike60" type="bike_bicycle" depart="66.41" departLane="best" departSpeed="max" from="227486359" to="267607730#0"/>
+    <trip id="bus53" type="bus_bus" depart="67.13" departLane="best" from="362492408#2" to="267607730#0"/>
+    <trip id="motorcycle53" type="motorcycle_motorcycle" depart="67.13" departLane="best" from="-167317069#2" to="267607730#0"/>
+    <trip id="truck53" type="truck_truck" depart="67.13" departLane="best" from="362492408#2" to="267607730#0"/>
+    <trip id="bike61" type="bike_bicycle" depart="67.51" departLane="best" from="227744471#3" to="267607730#0"/>
+    <trip id="bus54" type="bus_bus" depart="68.40" departLane="best" from="339112690#3" to="267607730#0"/>
+    <trip id="motorcycle54" type="motorcycle_motorcycle" depart="68.40" departLane="best" from="-166219972#3" to="267607730#0"/>
+    <trip id="truck54" type="truck_truck" depart="68.40" departLane="best" from="339112690#3" to="267607730#0"/>
+    <trip id="bike62" type="bike_bicycle" depart="68.62" departLane="best" departSpeed="max" from="-1000675589" to="267607730#0"/>
+    <trip id="bus55" type="bus_bus" depart="69.66" departLane="best" from="362492408#0" to="267607730#0"/>
+    <trip id="motorcycle55" type="motorcycle_motorcycle" depart="69.66" departLane="best" departSpeed="max" from="-169679288#1" to="267607730#0"/>
+    <trip id="truck55" type="truck_truck" depart="69.66" departLane="best" from="362492408#0" to="267607730#0"/>
+    <trip id="bike63" type="bike_bicycle" depart="69.73" departLane="best" from="-166219922#13" to="267607730#0"/>
+    <trip id="bike64" type="bike_bicycle" depart="70.83" departLane="best" departSpeed="max" from="688753819#0" to="267607730#0"/>
+    <trip id="bus56" type="bus_bus" depart="70.93" departLane="best" from="166220891#12" to="267607730#0"/>
+    <trip id="motorcycle56" type="motorcycle_motorcycle" depart="70.93" departLane="best" from="985688091#1" to="267607730#0"/>
+    <trip id="truck56" type="truck_truck" depart="70.93" departLane="best" from="166220891#12" to="267607730#0"/>
+    <trip id="bike65" type="bike_bicycle" depart="71.94" departLane="best" from="-57017120#5" to="267607730#0"/>
+    <trip id="bus57" type="bus_bus" depart="72.19" departLane="best" from="-166219973#2" to="267607730#0"/>
+    <trip id="motorcycle57" type="motorcycle_motorcycle" depart="72.19" departLane="best" from="166219944#3" to="267607730#0"/>
+    <trip id="truck57" type="truck_truck" depart="72.19" departLane="best" from="-166219973#2" to="267607730#0"/>
+    <trip id="bike66" type="bike_bicycle" depart="73.05" departLane="best" departSpeed="max" from="688753819#0" to="267607730#0"/>
+    <trip id="bus58" type="bus_bus" depart="73.46" departLane="best" departSpeed="max" from="169683843#0" to="267607730#0"/>
+    <trip id="motorcycle58" type="motorcycle_motorcycle" depart="73.46" departLane="best" from="167317175#1" to="267607730#0"/>
+    <trip id="truck58" type="truck_truck" depart="73.46" departLane="best" departSpeed="max" from="169683843#0" to="267607730#0"/>
+    <trip id="bike67" type="bike_bicycle" depart="74.15" departLane="best" from="166220891#3" to="267607730#0"/>
+    <trip id="bus59" type="bus_bus" depart="74.73" departLane="best" from="339112712#8" to="267607730#0"/>
+    <trip id="motorcycle59" type="motorcycle_motorcycle" depart="74.73" departLane="best" from="-267606688#12" to="267607730#0"/>
+    <trip id="truck59" type="truck_truck" depart="74.73" departLane="best" from="339112712#8" to="267607730#0"/>
+    <trip id="bike68" type="bike_bicycle" depart="75.26" departLane="best" from="-166219973#3" to="267607730#0"/>
+    <trip id="bus60" type="bus_bus" depart="75.99" departLane="best" from="-169686363#1" to="267607730#0"/>
+    <trip id="motorcycle60" type="motorcycle_motorcycle" depart="75.99" departLane="best" from="-166219967#2" to="267607730#0"/>
+    <trip id="truck60" type="truck_truck" depart="75.99" departLane="best" from="-169686363#1" to="267607730#0"/>
+    <trip id="bike69" type="bike_bicycle" depart="76.37" departLane="best" from="227492934#1" to="267607730#0"/>
+    <trip id="bus61" type="bus_bus" depart="77.26" departLane="best" from="-166219964#0" to="267607730#0"/>
+    <trip id="motorcycle61" type="motorcycle_motorcycle" depart="77.26" departLane="best" from="-267606688#1" to="267607730#0"/>
+    <trip id="truck61" type="truck_truck" depart="77.26" departLane="best" from="-166219964#0" to="267607730#0"/>
+    <trip id="bike70" type="bike_bicycle" depart="77.47" departLane="best" from="1010755614#1" to="267607730#0"/>
+    <trip id="bus62" type="bus_bus" depart="78.53" departLane="best" from="169679274#3" to="267607730#0"/>
+    <trip id="motorcycle62" type="motorcycle_motorcycle" depart="78.53" departLane="best" departSpeed="max" from="167317131" to="267607730#0"/>
+    <trip id="truck62" type="truck_truck" depart="78.53" departLane="best" from="169679274#3" to="267607730#0"/>
+    <trip id="bike71" type="bike_bicycle" depart="78.58" departLane="best" from="-267606599#4" to="267607730#0"/>
+    <trip id="bike72" type="bike_bicycle" depart="79.69" departLane="best" departSpeed="max" from="-985736920" to="267607730#0"/>
+    <trip id="bus63" type="bus_bus" depart="79.79" departLane="best" departSpeed="max" from="986109305#0" to="267607730#0"/>
+    <trip id="motorcycle63" type="motorcycle_motorcycle" depart="79.79" departLane="best" from="227818181" to="267607730#0"/>
+    <trip id="truck63" type="truck_truck" depart="79.79" departLane="best" departSpeed="max" from="986109305#0" to="267607730#0"/>
+    <trip id="bike73" type="bike_bicycle" depart="80.79" departLane="best" from="166219965#2" to="267607730#0"/>
+    <trip id="bus64" type="bus_bus" depart="81.06" departLane="best" departSpeed="max" from="-986101792" to="267607730#0"/>
+    <trip id="motorcycle64" type="motorcycle_motorcycle" depart="81.06" departLane="best" from="-166220893#1" to="267607730#0"/>
+    <trip id="truck64" type="truck_truck" depart="81.06" departLane="best" departSpeed="max" from="-986101792" to="267607730#0"/>
+    <trip id="bike74" type="bike_bicycle" depart="81.90" departLane="best" departSpeed="max" from="-169680276#4" to="267607730#0"/>
+    <trip id="bus65" type="bus_bus" depart="82.33" departLane="best" from="167293568#1" to="267607730#0"/>
+    <trip id="motorcycle65" type="motorcycle_motorcycle" depart="82.33" departLane="best" departSpeed="max" from="-985688101" to="267607730#0"/>
+    <trip id="truck65" type="truck_truck" depart="82.33" departLane="best" from="167293568#1" to="267607730#0"/>
+    <trip id="bike75" type="bike_bicycle" depart="83.01" departLane="best" departSpeed="max" from="986120602" to="267607730#0"/>
+    <trip id="bus66" type="bus_bus" depart="83.59" departLane="best" from="646131033" to="267607730#0"/>
+    <trip id="motorcycle66" type="motorcycle_motorcycle" depart="83.59" departLane="best" from="-117031001#0" to="267607730#0"/>
+    <trip id="truck66" type="truck_truck" depart="83.59" departLane="best" from="646131033" to="267607730#0"/>
+    <trip id="bike76" type="bike_bicycle" depart="84.11" departLane="best" from="166219926#14" to="267607730#0"/>
+    <trip id="bus67" type="bus_bus" depart="84.86" departLane="best" from="-169680951#6" to="267607730#0"/>
+    <trip id="motorcycle67" type="motorcycle_motorcycle" depart="84.86" departLane="best" from="167317033" to="267607730#0"/>
+    <trip id="truck67" type="truck_truck" depart="84.86" departLane="best" from="-169680951#6" to="267607730#0"/>
+    <trip id="bike77" type="bike_bicycle" depart="85.22" departLane="best" from="-167316987#6" to="267607730#0"/>
+    <trip id="bus68" type="bus_bus" depart="86.13" departLane="best" from="-166220840#1" to="267607730#0"/>
+    <trip id="motorcycle68" type="motorcycle_motorcycle" depart="86.13" departLane="best" from="169680276#0" to="267607730#0"/>
+    <trip id="truck68" type="truck_truck" depart="86.13" departLane="best" from="-166220840#1" to="267607730#0"/>
+    <trip id="bike78" type="bike_bicycle" depart="86.33" departLane="best" from="-853213336" to="267607730#0"/>
+    <trip id="bus69" type="bus_bus" depart="87.39" departLane="best" from="-169680951#4" to="267607730#0"/>
+    <trip id="motorcycle69" type="motorcycle_motorcycle" depart="87.39" departLane="best" from="-985696868#1" to="267607730#0"/>
+    <trip id="truck69" type="truck_truck" depart="87.39" departLane="best" from="-169680951#4" to="267607730#0"/>
+    <trip id="bike79" type="bike_bicycle" depart="87.43" departLane="best" departSpeed="max" from="-169683864#3" to="267607730#0"/>
+    <trip id="bike80" type="bike_bicycle" depart="88.54" departLane="best" from="-166220840#2" to="267607730#0"/>
+    <trip id="bus70" type="bus_bus" depart="88.66" departLane="best" departSpeed="max" from="339112712#0" to="267607730#0"/>
+    <trip id="motorcycle70" type="motorcycle_motorcycle" depart="88.66" departLane="best" from="-166219969#2" to="267607730#0"/>
+    <trip id="truck70" type="truck_truck" depart="88.66" departLane="best" departSpeed="max" from="339112712#0" to="267607730#0"/>
+    <trip id="veh16" type="veh_passenger" depart="89.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bike81" type="bike_bicycle" depart="89.65" departLane="best" from="169683864#2" to="267607730#0"/>
+    <trip id="bus71" type="bus_bus" depart="89.93" departLane="best" from="-169682788#0" to="267607730#0"/>
+    <trip id="motorcycle71" type="motorcycle_motorcycle" depart="89.93" departLane="best" from="57017120#1" to="267607730#0"/>
+    <trip id="truck71" type="truck_truck" depart="89.93" departLane="best" from="-169682788#0" to="267607730#0"/>
+    <trip id="bike82" type="bike_bicycle" depart="90.76" departLane="best" from="57011500#0" to="267607730#0"/>
+    <trip id="bus72" type="bus_bus" depart="91.19" departLane="best" departSpeed="max" from="-169679288#1" to="267607730#0"/>
+    <trip id="motorcycle72" type="motorcycle_motorcycle" depart="91.19" departLane="best" from="267606688#13" to="267607730#0"/>
+    <trip id="truck72" type="truck_truck" depart="91.19" departLane="best" departSpeed="max" from="-169679288#1" to="267607730#0"/>
+    <trip id="bike83" type="bike_bicycle" depart="91.86" departLane="best" departSpeed="max" from="-169791242#1" to="267607730#0"/>
+    <trip id="bus73" type="bus_bus" depart="92.46" departLane="best" departSpeed="max" from="868982557" to="267607730#0"/>
+    <trip id="motorcycle73" type="motorcycle_motorcycle" depart="92.46" departLane="best" from="-167316987#6" to="267607730#0"/>
+    <trip id="truck73" type="truck_truck" depart="92.46" departLane="best" departSpeed="max" from="868982557" to="267607730#0"/>
+    <trip id="bike84" type="bike_bicycle" depart="92.97" departLane="best" from="-169682786#2" to="267607730#0"/>
+    <trip id="bus74" type="bus_bus" depart="93.73" departLane="best" departSpeed="max" from="-986125896" to="267607730#0"/>
+    <trip id="motorcycle74" type="motorcycle_motorcycle" depart="93.73" departLane="best" from="-267606597#2" to="267607730#0"/>
+    <trip id="truck74" type="truck_truck" depart="93.73" departLane="best" departSpeed="max" from="-986125896" to="267607730#0"/>
+    <trip id="bike85" type="bike_bicycle" depart="94.08" departLane="best" from="-898303391#1" to="267607730#0"/>
+    <trip id="bus75" type="bus_bus" depart="94.99" departLane="best" from="166220903#3" to="267607730#0"/>
+    <trip id="motorcycle75" type="motorcycle_motorcycle" depart="94.99" departLane="best" from="-57016691#0" to="267607730#0"/>
+    <trip id="truck75" type="truck_truck" depart="94.99" departLane="best" from="166220903#3" to="267607730#0"/>
+    <trip id="bike86" type="bike_bicycle" depart="95.18" departLane="best" from="1000675590#1" to="267607730#0"/>
+    <trip id="bus76" type="bus_bus" depart="96.26" departLane="best" departSpeed="max" from="-985735790" to="267607730#0"/>
+    <trip id="motorcycle76" type="motorcycle_motorcycle" depart="96.26" departLane="best" from="169686358#2" to="267607730#0"/>
+    <trip id="truck76" type="truck_truck" depart="96.26" departLane="best" departSpeed="max" from="-985735790" to="267607730#0"/>
+    <trip id="bike87" type="bike_bicycle" depart="96.29" departLane="best" from="267606775#3" to="267607730#0"/>
+    <trip id="bike88" type="bike_bicycle" depart="97.40" departLane="best" from="166220908#0" to="267607730#0"/>
+    <trip id="bus77" type="bus_bus" depart="97.53" departLane="best" from="339112712#11" to="267607730#0"/>
+    <trip id="motorcycle77" type="motorcycle_motorcycle" depart="97.53" departLane="best" departSpeed="max" from="-877391417#1" to="267607730#0"/>
+    <trip id="truck77" type="truck_truck" depart="97.53" departLane="best" from="339112712#11" to="267607730#0"/>
+    <trip id="bike89" type="bike_bicycle" depart="98.50" departLane="best" departSpeed="max" from="-985736920" to="267607730#0"/>
+    <trip id="bus78" type="bus_bus" depart="98.79" departLane="best" departSpeed="max" from="-985733391" to="267607730#0"/>
+    <trip id="motorcycle78" type="motorcycle_motorcycle" depart="98.79" departLane="best" departSpeed="max" from="-167317036" to="267607730#0"/>
+    <trip id="truck78" type="truck_truck" depart="98.79" departLane="best" departSpeed="max" from="-985733391" to="267607730#0"/>
+    <trip id="bike90" type="bike_bicycle" depart="99.61" departLane="best" from="169683842#2" to="267607730#0"/>
+    <trip id="bus79" type="bus_bus" depart="100.06" departLane="best" departSpeed="max" from="-169683859#2" to="267607730#0"/>
+    <trip id="motorcycle79" type="motorcycle_motorcycle" depart="100.06" departLane="best" from="227744647#1" to="267607730#0"/>
+    <trip id="truck79" type="truck_truck" depart="100.06" departLane="best" departSpeed="max" from="-169683859#2" to="267607730#0"/>
+    <trip id="bike91" type="bike_bicycle" depart="100.72" departLane="best" from="-986105386" to="267607730#0"/>
+    <trip id="bus80" type="bus_bus" depart="101.33" departLane="best" departSpeed="max" from="-986101797#1" to="267607730#0"/>
+    <trip id="motorcycle80" type="motorcycle_motorcycle" depart="101.33" departLane="best" from="339112690#5" to="267607730#0"/>
+    <trip id="truck80" type="truck_truck" depart="101.33" departLane="best" departSpeed="max" from="-986101797#1" to="267607730#0"/>
+    <trip id="bike92" type="bike_bicycle" depart="101.82" departLane="best" departSpeed="max" from="-985690284" to="267607730#0"/>
+    <trip id="bus81" type="bus_bus" depart="102.59" departLane="best" from="-166219972#0" to="267607730#0"/>
+    <trip id="truck81" type="truck_truck" depart="102.59" departLane="best" from="-166219972#0" to="267607730#0"/>
+    <trip id="bike93" type="bike_bicycle" depart="102.93" departLane="best" from="-57016687#0" to="267607730#0"/>
+    <trip id="bus82" type="bus_bus" depart="103.86" departLane="best" departSpeed="max" from="991443347#0" to="267607730#0"/>
+    <trip id="motorcycle82" type="motorcycle_motorcycle" depart="103.86" departLane="best" from="227744647#1" to="267607730#0"/>
+    <trip id="truck82" type="truck_truck" depart="103.86" departLane="best" departSpeed="max" from="991443347#0" to="267607730#0"/>
+    <trip id="bike94" type="bike_bicycle" depart="104.04" departLane="best" from="-169679280#1" to="267607730#0"/>
+    <trip id="bus83" type="bus_bus" depart="105.13" departLane="best" departSpeed="max" from="985688091#0" to="267607730#0"/>
+    <trip id="motorcycle83" type="motorcycle_motorcycle" depart="105.13" departLane="best" from="166219922#4" to="267607730#0"/>
+    <trip id="truck83" type="truck_truck" depart="105.13" departLane="best" departSpeed="max" from="985688091#0" to="267607730#0"/>
+    <trip id="bike95" type="bike_bicycle" depart="105.14" departLane="best" departSpeed="max" from="-985735791" to="267607730#0"/>
+    <trip id="bike96" type="bike_bicycle" depart="106.25" departLane="best" from="-227492423#0" to="267607730#0"/>
+    <trip id="bus84" type="bus_bus" depart="106.39" departLane="best" from="267606775#1" to="267607730#0"/>
+    <trip id="motorcycle84" type="motorcycle_motorcycle" depart="106.39" departLane="best" from="307013306#1" to="267607730#0"/>
+    <trip id="truck84" type="truck_truck" depart="106.39" departLane="best" from="267606775#1" to="267607730#0"/>
+    <trip id="bike97" type="bike_bicycle" depart="107.36" departLane="best" departSpeed="max" from="-986102024" to="267607730#0"/>
+    <trip id="bus85" type="bus_bus" depart="107.66" departLane="best" departSpeed="max" from="-985688094" to="267607730#0"/>
+    <trip id="motorcycle85" type="motorcycle_motorcycle" depart="107.66" departLane="best" from="-877410552#1" to="267607730#0"/>
+    <trip id="truck85" type="truck_truck" depart="107.66" departLane="best" departSpeed="max" from="-985688094" to="267607730#0"/>
+    <trip id="bike98" type="bike_bicycle" depart="108.46" departLane="best" from="-166219973#0" to="267607730#0"/>
+    <trip id="bus86" type="bus_bus" depart="108.93" departLane="best" from="-877391417#0" to="267607730#0"/>
+    <trip id="motorcycle86" type="motorcycle_motorcycle" depart="108.93" departLane="best" from="169679278#6" to="267607730#0"/>
+    <trip id="truck86" type="truck_truck" depart="108.93" departLane="best" from="-877391417#0" to="267607730#0"/>
+    <trip id="bus87" type="bus_bus" depart="110.19" departLane="best" departSpeed="max" from="-986104609" to="267607730#0"/>
+    <trip id="motorcycle87" type="motorcycle_motorcycle" depart="110.19" departLane="best" from="167293523#9" to="267607730#0"/>
+    <trip id="truck87" type="truck_truck" depart="110.19" departLane="best" departSpeed="max" from="-986104609" to="267607730#0"/>
+    <trip id="bike100" type="bike_bicycle" depart="110.68" departLane="best" departSpeed="max" from="985699165" to="267607730#0"/>
+    <trip id="veh17" type="veh_passenger" depart="111.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus88" type="bus_bus" depart="111.46" departLane="best" from="955778651#3" to="267607730#0"/>
+    <trip id="motorcycle88" type="motorcycle_motorcycle" depart="111.46" departLane="best" from="166219963#2" to="267607730#0"/>
+    <trip id="truck88" type="truck_truck" depart="111.46" departLane="best" from="955778651#3" to="267607730#0"/>
+    <trip id="bus89" type="bus_bus" depart="112.73" departLane="best" from="-166220840#2" to="267607730#0"/>
+    <trip id="motorcycle89" type="motorcycle_motorcycle" depart="112.73" departLane="best" from="169680276#1" to="267607730#0"/>
+    <trip id="truck89" type="truck_truck" depart="112.73" departLane="best" from="-166220840#2" to="267607730#0"/>
+    <trip id="bus90" type="bus_bus" depart="113.99" departLane="best" departSpeed="max" from="-167317140#2" to="267607730#0"/>
+    <trip id="motorcycle90" type="motorcycle_motorcycle" depart="113.99" departLane="best" from="167317154#1" to="267607730#0"/>
+    <trip id="truck90" type="truck_truck" depart="113.99" departLane="best" departSpeed="max" from="-167317140#2" to="267607730#0"/>
+    <trip id="bus91" type="bus_bus" depart="115.26" departLane="best" departSpeed="max" from="985688091#0" to="267607730#0"/>
+    <trip id="motorcycle91" type="motorcycle_motorcycle" depart="115.26" departLane="best" from="169679274#28" to="267607730#0"/>
+    <trip id="truck91" type="truck_truck" depart="115.26" departLane="best" departSpeed="max" from="985688091#0" to="267607730#0"/>
+    <trip id="bus92" type="bus_bus" depart="116.52" departLane="best" departSpeed="max" from="-166219964#1" to="267607730#0"/>
+    <trip id="motorcycle92" type="motorcycle_motorcycle" depart="116.52" departLane="best" from="-267606597#4" to="267607730#0"/>
+    <trip id="truck92" type="truck_truck" depart="116.52" departLane="best" departSpeed="max" from="-166219964#1" to="267607730#0"/>
+    <trip id="bus93" type="bus_bus" depart="117.79" departLane="best" from="166219926#11" to="267607730#0"/>
+    <trip id="motorcycle93" type="motorcycle_motorcycle" depart="117.79" departLane="best" from="868982561" to="267607730#0"/>
+    <trip id="truck93" type="truck_truck" depart="117.79" departLane="best" from="166219926#11" to="267607730#0"/>
+    <trip id="bus94" type="bus_bus" depart="119.06" departLane="best" from="-167317146#1" to="267607730#0"/>
+    <trip id="motorcycle94" type="motorcycle_motorcycle" depart="119.06" departLane="best" from="-167293525#12" to="267607730#0"/>
+    <trip id="truck94" type="truck_truck" depart="119.06" departLane="best" from="-167317146#1" to="267607730#0"/>
+    <trip id="bus95" type="bus_bus" depart="120.32" departLane="best" from="-166220873#1" to="267607730#0"/>
+    <trip id="motorcycle95" type="motorcycle_motorcycle" depart="120.32" departLane="best" from="850016092" to="267607730#0"/>
+    <trip id="truck95" type="truck_truck" depart="120.32" departLane="best" from="-166220873#1" to="267607730#0"/>
+    <trip id="bus96" type="bus_bus" depart="121.59" departLane="best" from="166220906#1" to="267607730#0"/>
+    <trip id="motorcycle96" type="motorcycle_motorcycle" depart="121.59" departLane="best" departSpeed="max" from="-985696870" to="267607730#0"/>
+    <trip id="truck96" type="truck_truck" depart="121.59" departLane="best" from="166220906#1" to="267607730#0"/>
+    <trip id="veh18" type="veh_passenger" depart="122.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="bus97" type="bus_bus" depart="122.86" departLane="best" from="-169682786#3" to="267607730#0"/>
+    <trip id="motorcycle97" type="motorcycle_motorcycle" depart="122.86" departLane="best" departSpeed="max" from="167317131" to="267607730#0"/>
+    <trip id="truck97" type="truck_truck" depart="122.86" departLane="best" from="-169682786#3" to="267607730#0"/>
+    <trip id="bus98" type="bus_bus" depart="124.12" departLane="best" from="57016687#2" to="267607730#0"/>
+    <trip id="motorcycle98" type="motorcycle_motorcycle" depart="124.12" departLane="best" departSpeed="max" from="167317012" to="267607730#0"/>
+    <trip id="truck98" type="truck_truck" depart="124.12" departLane="best" from="57016687#2" to="267607730#0"/>
+    <trip id="bus99" type="bus_bus" depart="125.39" departLane="best" departSpeed="max" from="166220906#0" to="267607730#0"/>
+    <trip id="motorcycle99" type="motorcycle_motorcycle" depart="125.39" departLane="best" departSpeed="max" from="-169680276#4" to="267607730#0"/>
+    <trip id="truck99" type="truck_truck" depart="125.39" departLane="best" departSpeed="max" from="166220906#0" to="267607730#0"/>
+    <trip id="bus100" type="bus_bus" depart="126.66" departLane="best" departSpeed="max" from="-985703276#1" to="267607730#0"/>
+    <trip id="motorcycle100" type="motorcycle_motorcycle" depart="126.66" departLane="best" from="339112690#0" to="267607730#0"/>
+    <trip id="truck100" type="truck_truck" depart="126.66" departLane="best" departSpeed="max" from="-985703276#1" to="267607730#0"/>
+    <trip id="veh19" type="veh_passenger" depart="168.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh20" type="veh_passenger" depart="250.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh21" type="veh_passenger" depart="330.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh22" type="veh_passenger" depart="400.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh2" type="veh_passenger" depart="442.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh5" type="veh_passenger" depart="450.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh6" type="veh_passenger" depart="455.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh7" type="veh_passenger" depart="460.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh8" type="veh_passenger" depart="465.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh9" type="veh_passenger" depart="470.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh10" type="veh_passenger" depart="475.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh11" type="veh_passenger" depart="485.00" departLane="best" from="166219897#3" to="267607730#0"/>
+    <trip id="veh12" type="veh_passenger" depart="490.00" departLane="best" from="169680966#1" to="267607730#0"/>
+    <trip id="veh13" type="veh_passenger" depart="500.00" departLane="best" from="169680966#1" to="267607730#0"/>
+    <trip id="veh14" type="veh_passenger" depart="550.00" departLane="best" from="227826940#5" to="267607730#0"/>
+    <trip id="veh3" type="veh_passenger" depart="663.00" departLane="best" from="166219897#3" to="267607730#0"/>
+    <trip id="veh4" type="veh_passenger" depart="884.00" departLane="best" from="227826940#5" to="267607730#0"/>
 </routes>

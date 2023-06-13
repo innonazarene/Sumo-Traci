@@ -10,7 +10,7 @@ class SumoSimulation:
 
     def run_simulation(self, edges_to_close, simulation_duration, vehicles_list):
         # Connect to the running SUMO simulation
-        traci.start(["sumo-gui", "-c", self.sumocfg_file])
+        traci.start(["sumo-gui", "-c", self.sumocfg_file, "--time-to-teleport", "-1"])
 
         # Retrieve the list of available edges
         edge_list = traci.edge.getIDList()
@@ -46,7 +46,7 @@ class SumoSimulation:
         traci.close()
     def stats(self, edges_to_close, simulation_duration, null):
         # Connect to the running SUMO simulation
-        traci.start(["sumo", "-c", self.sumocfg_file])
+        traci.start(["sumo", "-c", self.sumocfg_file, "--time-to-teleport", "-1"])
 
         # Retrieve the list of available edges
         edge_list = traci.edge.getIDList()
@@ -88,7 +88,6 @@ class SumoSimulation:
         for lane in neighboring_lanes:
             vehicles = traci.lane.getLastStepVehicleIDs(lane[0])
 
-
             speeds = [traci.vehicle.getSpeed(vehicle) for vehicle in vehicles]
             # Get the current time
             current_time = traci.simulation.getTime()
@@ -102,7 +101,6 @@ class SumoSimulation:
             print("Vehicle", vehicle_id, "speed at time", current_time, "is", current_speed_kph, "km/h")
             if speeds:
                 avg_speed = sum(speeds) / len(speeds)
-
             else:
                 avg_speed = 0
             lane_speeds.append((lane[0], avg_speed))
@@ -122,20 +120,12 @@ simulation = SumoSimulation("../osm.sumocfg")
 # Define the list of edges to close
 
 #no constrain
-# edges_to_close = []
+edges_to_close = ["-339112691#1","339112691#0"]
 
 #single constrain
 # edges_to_close = ["-724017859#1","724017859#0"]
 
-#double constrain
-# edges_to_close = ["-724017859#1","724017859#0","-169680965#1","169680965#1"]
-
-#multiple constrain
-edges_to_close = ["-724017859#1","169680965#1","-169680965#1","-166219950#2","166219950#2","-166219927#7","166219927#7","-227492934#0","227492934#0","-166219927#2","166219927#2","57017121#4","-166219950#3"]
-
 vehicles_list = ["veh0","veh1","veh2","veh3","veh4","veh5","veh6","veh7","veh8","veh9","veh10","veh11","veh12","veh13","veh14","veh15","veh16","veh17","veh18","veh19","veh20","veh21","veh22"]
-
-
 
 # Run the simulation for a specific duration
 simulation_duration = 10000  # Replace with your desired duration in simulation steps
@@ -144,4 +134,4 @@ simulation_duration = 10000  # Replace with your desired duration in simulation 
 simulation.run_simulation(edges_to_close, simulation_duration, vehicles_list)
 simulation.stats(edges_to_close, 500, vehicles_list)
 # Plot the results
-#simulation.plot_results()
+simulation.plot_results()
