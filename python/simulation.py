@@ -27,8 +27,6 @@ class SumoSimulation:
                 if vhList:
                     if  vehicles_list[self.counter] in vhList:
                         best_lanes = self.calculate_best_lanes(vehicles_list[self.counter])
-                    else:
-                        self.counter += 1
             except:
                 print("vehicle gone")
                 self.counter += 1
@@ -44,7 +42,9 @@ class SumoSimulation:
         traci.close()
     def calculate_best_lanes(self, vehicle_id):
         # Get the current lane of the vehicle
+
         current_lane = traci.vehicle.getLaneID(vehicle_id)
+
 
         # Get the neighboring lanes of the current lane
         neighboring_lanes = traci.lane.getLinks(current_lane)
