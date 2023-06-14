@@ -41,6 +41,7 @@ class SumoSimulation:
         # End the simulation and close the TraCI connection
         traci.close()
     def calculate_best_lanes(self, vehicle_id):
+
         # Get the current lane of the vehicle
 
         current_lane = traci.vehicle.getLaneID(vehicle_id)
@@ -51,6 +52,7 @@ class SumoSimulation:
         # print("neighboring_lanes: ",neighboring_lanes)
         # Calculate average vehicle speed for each neighboring lane
         lane_speeds = []
+
         for lane in neighboring_lanes:
             vehicles = traci.lane.getLastStepVehicleIDs(lane[0])
 
@@ -86,12 +88,12 @@ simulation = SumoSimulation("../osm.sumocfg")
 # Define the list of edges to close
 
 #no constrain
-edges_to_close = ["-339112691#1","339112691#0"]
+edges_to_close = ["-339112691#1","339112691#0","-166219910","166219910"]
 
 #single constrain
 # edges_to_close = ["-724017859#1","724017859#0"]
 
-vehicles_list = ["veh0","veh1","veh2","veh3","veh4","veh5","veh6","veh7","veh8","veh9","veh10","veh11","veh12","veh13","veh14","veh15","veh16","veh17","veh18","veh19","veh20","veh21","veh22"]
+vehicles_list = ["veh0"]
 
 # Run the simulation for a specific duration
 simulation_duration = 10000  # Replace with your desired duration in simulation steps
